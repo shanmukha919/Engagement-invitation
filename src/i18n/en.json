@@ -1,0 +1,82 @@
+{
+  "doors": {
+    "tapToOpen": "Tap to open",
+    "opening": "Opening..."
+  },
+  "hero": {
+    "weAreGettingMarried": "Engagement Ceremony Invitation",
+    "sacredInvocation": "Sri Rastu - Shubhamastu - Avighnamastu",
+    "familyHeading": "Potturi Family",
+    "dear": "Dear",
+    "honorOfPresence": "request the honor of your presence to celebrate the engagement ceremony of",
+    "sonOf": "Only son of",
+    "daughterOf": "Only daughter of",
+    "scrollDown": "Scroll down"
+  },
+  "welcome": {
+    "title": "Welcome With Blessings",
+    "message": "We cordially invite you with your family and friends to celebrate this sacred milestone and shower your heartfelt blessings with yellow akshintalu upon the bride and groom."
+  },
+  "scratch": {
+    "title": "Scratch for Muhurtham",
+    "instructions": "Scratch the gold glitter heart to reveal the sacred muhurtham date & time",
+    "saveTheDate": "Save the Date",
+    "addToGoogle": "Add to Google Calendar",
+    "downloadIcs": "Download .ICS Calendar"
+  },
+  "countdown": {
+    "title": "Counting Down to the Muhurtham",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds"
+  },
+  "gallery": {
+    "title": "Cherished Moments",
+    "subtitle": "A glimpse of Yamini & Srikar's journey together"
+  },
+  "timeline": {
+    "title": "Program Schedule",
+    "subtitle": "Order of auspicious ceremonies for the day"
+  },
+  "events": {
+    "title": "Engagement Celebrations",
+    "dressCode": "Dress Code",
+    "viewLocation": "View Location"
+  },
+  "info": {
+    "title": "Guest Information",
+    "dressCodeTitle": "Dress Code",
+    "transportationTitle": "Transportation & Landmark",
+    "accommodationTitle": "Accommodation",
+    "women": "Women",
+    "men": "Men"
+  },
+  "venue": {
+    "title": "Venue & Directions",
+    "openGoogleMaps": "Open in Google Maps",
+    "getDirections": "Get Directions",
+    "mapHint": "Use two fingers to move the map"
+  },
+  "rsvp": {
+    "title": "RSVP",
+    "subtitle": "Kindly confirm your presence by November 25, 2026",
+    "name": "Full Name",
+    "phone": "Phone / WhatsApp",
+    "attending": "Will you attend?",
+    "yes": "Yes, joyfully accepting",
+    "no": "Regretfully decline",
+    "guestCount": "Number of Guests Attending",
+    "message": "Blessings / Message for Yamini & Srikar",
+    "submit": "Submit RSVP",
+    "submitting": "Confirming...",
+    "successTitle": "RSVP Confirmed!",
+    "successMsg": "Thank you! We eagerly look forward to celebrating with you.",
+    "shareWhatsApp": "Share Invitation on WhatsApp"
+  },
+  "footer": {
+    "withLove": "Invited With Love By",
+    "family": "Sri Potturi Sudhakara Rao & Smt. Lakshmi Sundari",
+    "credit": "With compliments from relatives and friends"
+  }
+}

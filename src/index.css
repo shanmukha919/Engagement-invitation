@@ -1,0 +1,233 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sage: #8A9A7B;
+  --cream: #F6EEDF;
+  --olive: #3F4A35;
+  --gold: #C9A66B;
+  --blush: #E8C9C0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: var(--olive);
+  background-color: #212421;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Subtle paper grain texture pattern across cream sections */
+.paper-texture {
+  background-color: #F6EEDF;
+  background-image: radial-gradient(#3F4A35 0.5px, transparent 0.5px), radial-gradient(#3F4A35 0.5px, #F6EEDF 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  background-blend-mode: multiply;
+}
+
+/* Smooth golden shimmer sweep */
+.gold-shimmer-sweep {
+  position: relative;
+  overflow: hidden;
+}
+.gold-shimmer-sweep::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -150%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.45) 50%,
+    transparent 70%
+  );
+  transform: rotate(25deg);
+  animation: shimmerSweep 3.2s infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmerSweep {
+  0% { transform: translateX(-100%) rotate(25deg); }
+  60% { transform: translateX(120%) rotate(25deg); }
+  100% { transform: translateX(120%) rotate(25deg); }
+}
+
+/* Glass buttons */
+.glass-pill {
+  background: rgba(246, 238, 223, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 166, 107, 0.5);
+  box-shadow: 0 8px 24px rgba(63, 74, 53, 0.12);
+}
+
+.glass-pill:hover {
+  background: rgba(246, 238, 223, 0.95);
+  border-color: rgba(201, 166, 107, 0.85);
+}
+
+/* Card gold border */
+.card-gold-border {
+  border: 1px solid rgba(201, 166, 107, 0.45);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Swiper custom pagination */
+.swiper-pagination-bullet {
+  background: #C9A66B !important;
+  opacity: 0.45 !important;
+  transition: all 0.3s ease;
+}
+.swiper-pagination-bullet-active {
+  background: #9E7B44 !important;
+  opacity: 1 !important;
+  width: 20px !important;
+  border-radius: 6px !important;
+}
+
+/* Leaflet container fixes */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  z-index: 10;
+}
+
+/* Hide scrollbar on swiper / horizontally scrollable containers */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ═══ Flower Shower Animations ═══ */
+
+/* Falling rose petals */
+@keyframes petalFall {
+  0% {
+    transform: translateY(-40px) translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: translateY(25vh) translateX(var(--sway, 30px)) rotate(90deg);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(50vh) translateX(calc(var(--sway, 30px) * -0.5)) rotate(180deg);
+    opacity: 0.75;
+  }
+  75% {
+    transform: translateY(75vh) translateX(var(--sway, 30px)) rotate(270deg);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(105vh) translateX(0) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.petal-fall {
+  animation: petalFall var(--petal-duration, 5s) var(--petal-delay, 0s) ease-in forwards;
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* Floating hearts upward */
+@keyframes heartFloat {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-40px) scale(1.1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-90px) scale(0.8);
+    opacity: 0;
+  }
+}
+
+.heart-float {
+  animation: heartFloat var(--heart-duration, 3s) var(--heart-delay, 0s) ease-out forwards infinite;
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+/* Sparkle pop */
+@keyframes sparklePop {
+  0%   { transform: scale(0) rotate(0deg); opacity: 0; }
+  30%  { transform: scale(1.4) rotate(45deg); opacity: 1; }
+  70%  { transform: scale(1) rotate(90deg); opacity: 0.8; }
+  100% { transform: scale(0) rotate(135deg); opacity: 0; }
+}
+
+.sparkle-pop {
+  animation: sparklePop var(--sparkle-duration, 1s) var(--sparkle-delay, 0s) ease-in-out forwards;
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+  font-size: 1.1rem;
+  will-change: transform, opacity;
+}
+
+/* ═══ Smooth custom scrollbar for main content ═══ */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(201, 166, 107, 0.4);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 166, 107, 0.7);
+}
+
+/* ═══ Line clamp utility ═══ */
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ═══ Section separator flourish ═══ */
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 auto;
+  max-width: 200px;
+}
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(201,166,107,0.5));
+}
+.section-divider::after {
+  background: linear-gradient(to left, transparent, rgba(201,166,107,0.5));
+}
+
