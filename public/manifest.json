@@ -3,17 +3,17 @@
   "name": "Engagement Ceremony Invitation - Yamini & Srikar",
   "icons": [
     {
-      "src": "/crest.png",
+      "src": "/Engagement-invitation/crest.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/crest.png",
+      "src": "/Engagement-invitation/crest.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": "/",
+  "start_url": "/Engagement-invitation/",
   "background_color": "#F6EEDF",
   "theme_color": "#8A9A7B",
   "display": "standalone",
